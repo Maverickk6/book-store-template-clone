@@ -9,6 +9,7 @@ import { RootStackParamList } from "../App";
 
 interface BookProp {
   books: Book;
+  accessibilityLabel: string;
 }
 
 type detailsScreenProps = StackNavigationProp<RootStackParamList, "Details">;

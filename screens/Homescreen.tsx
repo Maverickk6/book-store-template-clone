@@ -38,7 +38,13 @@ const Homescreen = () => {
 
   const getContent = () => {
     if (isLoading) {
-      return <ActivityIndicator size="large" />;
+      return (
+        <ActivityIndicator
+          size="large"
+          testId="loading"
+          accessibilityLabel="App is loading books"
+        />
+      );
     }
     if (error) {
       return <Text>{error}</Text>;
@@ -67,7 +73,7 @@ const Homescreen = () => {
                 })
               }
             >
-              <BookCard books={item} />
+              <BookCard books={item} accessibilityLabel="books" />
             </Pressable>
           );
         }}
