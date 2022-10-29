@@ -13,16 +13,12 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [isLoading, setLoading] = useState(true);
-  const [data, setData] = useState([]);
-
   return (
     <NavigationContainer>
       <Stack.Navigator
         screenOptions={{
           headerShown: false,
           headerTintColor: "white",
-          headerStyle: { backgroundColor: "blue" },
         }}
       >
         {/* screens */}
